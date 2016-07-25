@@ -22,13 +22,13 @@ flora           = RawIngredient.create! name: "Flora"
 block_butter    = RawIngredient.create! name: "Block Butter"
 vanilla_essence = RawIngredient.create! name: "Vanilla Essence"
 
-Cost.create! raw_ingredient: flour,           unit: cup,   pence: 20, quantity: 1,    supplier: aldi
-Cost.create! raw_ingredient: flour,           unit: gram,  pence: 10, quantity: 100,  supplier: aldi
-Cost.create! raw_ingredient: sugar,           unit: cup,   pence: 40, quantity: 1,    supplier: aldi
-Cost.create! raw_ingredient: sugar,           unit: gram,  pence: 20, quantity: 100,  supplier: aldi
-Cost.create! raw_ingredient: eggs,            unit: whole, pence: 25, quantity: 1,    supplier: aldi
-Cost.create! raw_ingredient: cocoa_powder,    unit: cup,   pence: 40, quantity: 0.25, supplier: sainsburys
-Cost.create! raw_ingredient: cocoa_powder,    unit: gram,  pence: 40, quantity: 15,   supplier: sainsburys
-Cost.create! raw_ingredient: flora,           unit: gram,  pence: 40, quantity: 100,  supplier: sainsburys
-Cost.create! raw_ingredient: block_butter,    unit: gram,  pence: 72, quantity: 100,  supplier: aldi
-Cost.create! raw_ingredient: vanilla_essence, unit: tsp,   pence: 10, quantity: 1,    supplier: sainsburys
+SupplierIngredient.create! raw_ingredient: flour,           unit: cup,   pence: 20, quantity: 1,    supplier: aldi
+SupplierIngredient.create! raw_ingredient: flour,           unit: gram,  pence: 10, quantity: 100,  supplier: aldi
+SupplierIngredient.create! raw_ingredient: sugar,           unit: cup,   pence: 40, quantity: 1,    supplier: aldi
+SupplierIngredient.create! raw_ingredient: sugar,           unit: gram,  pence: 20, quantity: 100,  supplier: aldi
+SupplierIngredient.create! raw_ingredient: eggs,            unit: whole, pence: 25, quantity: 1,    supplier: aldi
+SupplierIngredient.create! raw_ingredient: cocoa_powder,    unit: cup,   pence: 40, quantity: 0.25, supplier: sainsburys
+SupplierIngredient.create! raw_ingredient: cocoa_powder,    unit: gram,  pence: 40, quantity: 15,   supplier: sainsburys
+SupplierIngredient.create! raw_ingredient: flora,           unit: gram,  pence: 40, quantity: 100,  supplier: sainsburys
+SupplierIngredient.create! raw_ingredient: block_butter,    unit: gram,  pence: 72, quantity: 100,  supplier: aldi
+SupplierIngredient.create! raw_ingredient: vanilla_essence, unit: tsp,   pence: 10, quantity: 1,    supplier: sainsburys

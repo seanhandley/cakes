@@ -12,23 +12,23 @@ class CreateRawIngredients < ActiveRecord::Migration[5.0]
       t.string :name
     end
 
-    create_table :costs do |t|
-      t.integer :raw_ingredient_id
-      t.integer :supplier_id
-      t.integer :unit_id
-      t.float   :quantity
-      t.integer :pence
+    create_table :supplier_ingredients do |t|
+      t.integer  :raw_ingredient_id
+      t.integer  :supplier_id
+      t.integer  :unit_id
+      t.float    :quantity
+      t.integer  :pence
     end
 
     create_table :recipes do |t|
-      t.string :name
+      t.string   :name
     end
 
     create_table :recipe_ingredients do |t|
-      t.integer :recipe_id
-      t.integer :cost_id
-      t.integer :quantity
-      t.integer :unit_id
+      t.integer  :recipe_id
+      t.integer  :supplier_ingredient_id
+      t.float    :quantity
+      t.integer  :unit_id
     end
   end
 end

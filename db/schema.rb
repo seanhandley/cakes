@@ -12,34 +12,34 @@
 
 ActiveRecord::Schema.define(version: 20160724185707) do
 
-  create_table "costs", force: :cascade do |t|
+  create_table "raw_ingredients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+  end
+
+  create_table "recipe_ingredients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "recipe_id"
+    t.integer "supplier_ingredient_id"
+    t.float   "quantity",               limit: 24
+    t.integer "unit_id"
+  end
+
+  create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+  end
+
+  create_table "supplier_ingredients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "raw_ingredient_id"
     t.integer "supplier_id"
     t.integer "unit_id"
-    t.float   "quantity"
+    t.float   "quantity",          limit: 24
     t.integer "pence"
   end
 
-  create_table "raw_ingredients", force: :cascade do |t|
+  create_table "suppliers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
   end
 
-  create_table "recipe_ingredients", force: :cascade do |t|
-    t.integer "recipe_id"
-    t.integer "cost_id"
-    t.integer "quantity"
-    t.integer "unit_id"
-  end
-
-  create_table "recipes", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "suppliers", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "units", force: :cascade do |t|
+  create_table "units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
   end
 

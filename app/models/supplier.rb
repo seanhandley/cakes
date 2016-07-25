@@ -1,3 +1,3 @@
 class Supplier < ApplicationRecord
-  has_many :costs, inverse_of: :supplier
+  has_many :supplier_ingredients, inverse_of: :supplier
 end

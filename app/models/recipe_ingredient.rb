@@ -4,6 +4,6 @@ class RecipeIngredient < ApplicationRecord
   belongs_to :unit,                inverse_of: :recipe_ingredients
 
   def pence
-    cost.pence_per_whole_unit * quantity
+    supplier_ingredient.pence_per_whole_unit * quantity
   end
 end

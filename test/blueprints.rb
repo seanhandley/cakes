@@ -8,6 +8,10 @@ RawIngredient.blueprint do
   name { Faker::Lorem.word }
 end
 
+Recipe.blueprint do
+  name { Faker::Lorem.word }
+end
+
 units = [:cup, :gram, :whole, :teaspoon]
 units.each do |i|
   Unit.blueprint(i) do
@@ -25,4 +29,11 @@ SupplierIngredient.blueprint do
   unit           { Unit.make          }
   quantity       { rand(1..2000)      }
   pence          { rand(20..4000)     }
+end
+
+RecipeIngredient.blueprint do
+  supplier_ingredient { SupplierIngredient.make }
+  recipe              { Recipe.make             }
+  unit                { Unit.make               }
+  quantity            { rand(1..2000)           }
 end

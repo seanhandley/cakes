@@ -36,6 +36,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'machinist'
   gem 'faker'
+  gem "minitest-rails"
+  gem 'database_cleaner'
 end
 
 group :development do

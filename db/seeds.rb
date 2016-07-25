@@ -9,10 +9,10 @@
 aldi       = Supplier.create! name: "Aldi"
 sainsburys = Supplier.create! name: "Sainsburys"
 
-cup   = Unit.create! name: "Cup"
-gram  = Unit.create! name: "Gram"
-whole = Unit.create! name: "Whole" 
-tsp   = Unit.create! name: "Teaspoon"
+cup   = Unit.create! name: "cup"
+gram  = Unit.create! name: "gram"
+whole = Unit.create! name: "whole" 
+tsp   = Unit.create! name: "teaspoon"
 
 flour           = RawIngredient.create! name: "Flour"
 sugar           = RawIngredient.create! name: "Sugar"

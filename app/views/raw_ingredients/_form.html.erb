@@ -1,0 +1,17 @@
+<%= form_for(raw_ingredient) do |f| %>
+  <% if raw_ingredient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(raw_ingredient.errors.count, "error") %> prohibited this raw_ingredient from being saved:</h2>
+
+      <ul>
+      <% raw_ingredient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

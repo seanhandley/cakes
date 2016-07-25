@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Supplier Ingredients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supplier_ingredients.each do |supplier_ingredient| %>
+      <tr>
+        <td><%= link_to 'Show', supplier_ingredient %></td>
+        <td><%= link_to 'Edit', edit_supplier_ingredient_path(supplier_ingredient) %></td>
+        <td><%= link_to 'Destroy', supplier_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supplier Ingredient', new_supplier_ingredient_path %>

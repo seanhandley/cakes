@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    render text: Cost.all.inspect
+    render text: 'OK'
   end
 end
